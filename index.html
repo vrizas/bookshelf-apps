@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookshelf Apps</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="assets/styles/style.css">
+</head>
+<body>
+    <header>
+        <a href="#"><h1 class="logo">Bookshelf Apps</h1></a>
+    </header>
+    <main>
+        <section id="flashMessage">
+            <i class='bx bx-x'></i>
+            <h5>Apakah Anda yakin ingin menghapus buku ini?</h5>
+            <div class="flash-button">
+                <button class="yes-button">Hapus</button>
+                <button class="no-button">Batalkan</button>
+            </div>
+        </section>
+        <section>
+            <form class="search-form">
+                <input type="search" placeholder="masukkan judul atau penulis">
+                <input type="submit" value="Cari">
+            </form>
+        </section>
+        <section class="card">
+            <h2>Belum Selesai Dibaca</h2>
+            <div class="rak" id="rakBelumSelesaiBaca">
+                <article class="item">
+                    <div class="form-container">
+                        <i class='bx bx-plus-circle'></i>
+                        <form class="add-form">
+                            <input type="text" placeholder="masukkan judul buku" required>
+                            <input type="text" placeholder="masukkan penulis" required>
+                            <input type="number" placeholder="masukkan tahun" required>
+                            <input type="submit" value="Tambah">
+                        </form>
+                        <button class="cancel-button cancel-add-button">Batal</button>
+                    </div>
+                </article>
+            </div>    
+        </section>
+        <section class="card">
+            <h2>Selesai Dibaca</h2>
+            <div class="rak" id="rakSelesaiBaca">
+                <article class="item">
+                    <div class="form-container">
+                        <i class='bx bx-plus-circle'></i>
+                        <form class="add-form">
+                            <input type="text" placeholder="masukkan judul buku" required>
+                            <input type="text" placeholder="masukkan penulis" required>
+                            <input type="number" placeholder="masukkan tahun" required>
+                            <input type="submit" value="Tambah">
+                        </form>
+                        <button class="cancel-button cancel-add-button">Batal</button>
+                    </div>
+                </article>
+            </div>    
+        </section>
+    </main>
+<script src="assets/js/storage.js"></script>   
+<script src="assets/js/script.js"></script> 
+</body>
+</html>
