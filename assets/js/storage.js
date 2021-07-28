@@ -16,7 +16,7 @@ function setData() {
 }
 
 function getData() {
-    let data = JSON.parse(localStorage.getItem(BOOKSHELF_KEY));
+    let data = JSON.parse(localStorage.getItem(BOOKSHELF_KEY)) || [];
     books = data;
 }
 
