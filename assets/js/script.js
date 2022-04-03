@@ -187,9 +187,8 @@ function createEditForm(element) {
     yearInput.setAttribute('placeholder', 'masukkan tahun'); 
     yearInput.setAttribute('required', '');
     
-    const submitButton = document.createElement('input');
-    submitButton.setAttribute('type', 'submit');
-    submitButton.setAttribute('value', 'Simpan');
+    const submitButton = document.createElement('button');
+    submitButton.innerHTML = 'Simpan';
 
     const formElement = document.createElement('form');
     formElement.classList.add('add-form');
@@ -321,9 +320,12 @@ function searchBook(e) {
 }
 
 function deleteBook(element) {
-    element.remove();
-    books.splice(searchData(element[BOOK_ID]), 1);
-    setData();
+    if(searchData(element[BOOK_ID]) !== -1) {
+        element.remove();  
+        const index = books.indexOf(searchData(element[BOOK_ID]));
+        books.splice(index, 1);
+        setData();
+    }
 }
 
 function flashMessage(type, element) {
@@ -364,7 +366,7 @@ function flashMessage(type, element) {
         closeButton.addEventListener('click', (e) => {
             e.target.parentElement.classList.remove('delete-notification');
         });
-
+        
         message.parentElement.classList.add('delete-notification');
 
         document.querySelector('.yes-button').addEventListener('click', ()=> {
